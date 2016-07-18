@@ -34,10 +34,10 @@ public class AutomationScriptRunner extends AutomationScripts{
 			System.out.println(result[0]+":"+result[1]);
 
 			if(result[0].equals("Pass")){
-				writeExecutionResults("recData[i][1]", "Pass", "C:\\Users\\vj\\Desktop\\amazon.com\\test execution controller.xlsx", "Sheet1", result[1]);
+				writeExecutionResults(recData[i][1], "Pass", "C:\\Users\\vj\\Desktop\\amazon.com\\test execution controller.xlsx", "Sheet1", result[1]);
 
 			}else if(result[0].equals("Fail")){
-				writeExecutionResults("recData[i][1]", "Fail", "C:\\Users\\vj\\Desktop\\amazon.com\\test execution controller.xlsx", "Sheet1", result[1]);
+				writeExecutionResults(recData[i][1], "Fail", "C:\\Users\\vj\\Desktop\\amazon.com\\test execution controller.xlsx", "Sheet1", result[1]);
 			}
 		}
 
