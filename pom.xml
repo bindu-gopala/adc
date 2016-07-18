@@ -15,6 +15,7 @@
         </configuration>
       </plugin>
     </plugins>
+  </build>
     <dependencies>
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
@@ -65,7 +66,7 @@
 
 
 </dependencies>
-  </build>
+
   
   
   
