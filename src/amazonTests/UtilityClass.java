@@ -327,7 +327,7 @@ public class UtilityClass {
 				cell1.setCellValue(result);
 				XSSFCreationHelper helper= wb.getCreationHelper();
 				XSSFHyperlink hyperlink=helper.createHyperlink(Hyperlink.LINK_URL);
-				String path = "file:///C:/Users/vj/Desktop/Report/Log/Amazon%20Search%20Test%20Cases/Amazon%20Search%20Test%20Cases" +  "_"+timestamp+".html";
+				String path = "file:///C:/Users/vj/workspace/amazonTests/Report/Log/Amazon%20Search%20Test%20Cases/Amazon%20Search%20Test%20Cases" +  "_"+timestamp+".html";
 				hyperlink.setAddress(path);
 
 				cell1.setHyperlink(hyperlink);
