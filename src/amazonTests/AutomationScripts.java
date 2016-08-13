@@ -20,7 +20,7 @@ public class AutomationScripts extends UtilityClass {
 	public static String launchApp() throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
 		String timestamp;
-		timestamp = startReport("Amazon Search Test Cases","C:\\Users\\vj\\workspace\\amazonTests\\Report\\");
+		timestamp = startReport("Amazon Search Test Cases","Report\\");
 		String url = "https://www.amazon.com/";
 		try{
 
@@ -50,7 +50,7 @@ public class AutomationScripts extends UtilityClass {
 
 	public static String searchForItem() throws IOException{
 		String timestamp;
-		timestamp = startReport("Amazon Search Test Cases","C:\\Users\\vj\\workspace\\amazonTests\\Report\\");
+		timestamp = startReport("Amazon Search Test Cases","Report\\");
 		String item = "iphone 6";
 		String url = "https://www.amazon.com/";
 		try{
@@ -80,7 +80,7 @@ public class AutomationScripts extends UtilityClass {
 	public static String searchForItemSuggestion() throws IOException {
 		// TODO Auto-generated method stub
 		String timestamp;
-		timestamp = startReport("Amazon Search Test Cases","C:\\Users\\vj\\workspace\\amazonTests\\Report\\");
+		timestamp = startReport("Amazon Search Test Cases","Report\\");
 		String item = "iphone 6";
 		String url = "https://www.amazon.com/";
 		try{
@@ -109,11 +109,11 @@ public class AutomationScripts extends UtilityClass {
 
 	public static String validateDepartmentDropDown() throws IOException{
 		String timestamp;
-		timestamp = startReport("Amazon Search Test Cases","C:\\Users\\vj\\workspace\\amazonTests\\Report\\");
+		timestamp = startReport("Amazon Search Test Cases","Report\\");
 		String url = "https://www.amazon.com/";
 		try{
 			driver.manage().timeouts().implicitlyWait(3000, TimeUnit.MILLISECONDS);
-			String[][] recData = AutomationScripts.readExcel("C:\\Users\\vj\\workspace\\amazonTests\\Test Data\\departmentsList.xlsx", "Sheet1");
+			String[][] recData = AutomationScripts.readExcel("Test Data\\departmentsList.xlsx", "Sheet1");
 			String pageTitle = Homepage.goToHomepage(url);
 			List<WebElement> departmentsDropdown = Homepage.getDepartmentDropDown();
 
@@ -138,11 +138,11 @@ public class AutomationScripts extends UtilityClass {
 
 	public static String validateTryPrimeDropDown() throws IOException{
 		String timestamp;
-		timestamp = startReport("Amazon Search Test Cases","C:\\Users\\vj\\workspace\\amazonTests\\Report\\");
+		timestamp = startReport("Amazon Search Test Cases","Report\\");
 		String url = "https://www.amazon.com/";
 		try{
 			driver.manage().timeouts().implicitlyWait(3000, TimeUnit.MILLISECONDS);
-			String[][] recData = AutomationScripts.readExcel("C:\\Users\\vj\\workspace\\amazonTests\\Test Data\\tryPrimeList.xlsx", "Sheet1");
+			String[][] recData = AutomationScripts.readExcel("Test Data\\tryPrimeList.xlsx", "Sheet1");
 			String pageTitle = Homepage.goToHomepage(url);
 			List<WebElement> tryPrimetDropDownList = Homepage.getTryPrimeDropDown();
 
@@ -167,11 +167,11 @@ public class AutomationScripts extends UtilityClass {
 
 	public static String validateYourAccountDropDown() throws IOException{
 		String timestamp;
-		timestamp = startReport("Amazon Search Test Cases","C:\\Users\\vj\\workspace\\amazonTests\\Report\\");
+		timestamp = startReport("Amazon Search Test Cases","Report\\");
 		String url = "https://www.amazon.com/";
 		try{
 			driver.manage().timeouts().implicitlyWait(3000, TimeUnit.MILLISECONDS);
-			String[][] recData = AutomationScripts.readExcel("C:\\Users\\vj\\workspace\\amazonTests\\Test Data\\yourAccountList.xlsx", "Sheet1");
+			String[][] recData = AutomationScripts.readExcel("Test Data\\yourAccountList.xlsx", "Sheet1");
 			String pageTitle = Homepage.goToHomepage(url);
 			List<WebElement> getYourAccountDropDown = Homepage.getYourAccountDropDown();
 
@@ -196,12 +196,12 @@ public class AutomationScripts extends UtilityClass {
 
 	public static String validateHover() throws IOException{
 		String timestamp;
-		timestamp = startReport("Amazon Search Test Cases","C:\\Users\\vj\\workspace\\amazonTests\\Report\\");
+		timestamp = startReport("Amazon Search Test Cases","Report\\");
 		String url = "http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=iphone";
 
 		try{
 			driver.manage().timeouts().implicitlyWait(3000, TimeUnit.MILLISECONDS);
-			String[][] recData = AutomationScripts.readExcel("C:\\Users\\vj\\workspace\\amazonTests\\Test Data\\leftNavLinks.xlsx", "Sheet1");
+			String[][] recData = AutomationScripts.readExcel("Test Data\\leftNavLinks.xlsx", "Sheet1");
 			String pageTitle = SearchResultsPage.getSearchedUrl(url);
 			System.out.println(recData[1][1]);
 			verifyHover(driver, SearchResultsPage.getNavLink(recData[1][1]), recData[1][1]);
@@ -221,12 +221,12 @@ public class AutomationScripts extends UtilityClass {
 	}
 	public static String validateRefineSearch() throws IOException{
 		String timestamp;
-		timestamp = startReport("Amazon Search Test Cases","C:\\Users\\vj\\workspace\\amazonTests\\Report\\");
+		timestamp = startReport("Amazon Search Test Cases","Report\\");
 		String url = "http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=iphone";
 
 		try{
 			driver.manage().timeouts().implicitlyWait(3000, TimeUnit.MILLISECONDS);
-			String[][] recData = AutomationScripts.readExcel("C:\\Users\\vj\\workspace\\amazonTests\\Test Data\\filtersList.xlsx", "Sheet1");
+			String[][] recData = AutomationScripts.readExcel("Test Data\\filtersList.xlsx", "Sheet1");
 			String pageTitle = SearchResultsPage.getSearchedUrl(url);
 			System.out.println(recData[1][1]);
 			WebElement filterCheckBox=SearchResultsPage.getFilter(recData[1][1]);
