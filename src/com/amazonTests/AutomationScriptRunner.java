@@ -17,11 +17,11 @@ public class AutomationScriptRunner extends AutomationScripts{
 	public static void main(String[] args) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, IOException {
 		// TODO Auto-generated method stub
 		System.out.println("Maven project started");
-		String[][] recData = AutomationScripts.readExcel("C:\\Users\\vj\\workspace\\amazonTests\\Test Data\\test execution controller.xlsx", "Sheet1");
+		String[][] recData = AutomationScripts.readExcel("Test Data\\test execution controller.xlsx", "Sheet1");
 		cur_dt = new Date(); 
 		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		String strTimeStamp = dateFormat.format(cur_dt);
-		writeExecutionResults(recData[0][1], strTimeStamp, "C:\\Users\\vj\\workspace\\amazonTests\\Test Data\\test execution controller.xlsx", "Sheet1", "");
+		writeExecutionResults(recData[0][1], strTimeStamp, "Test Data\\test execution controller.xlsx", "Sheet1", "");
 
 
 		for (int i =1; i< recData.length;i++){
@@ -34,10 +34,10 @@ public class AutomationScriptRunner extends AutomationScripts{
 			System.out.println(result[0]+":"+result[1]);
 
 			if(result[0].equals("Pass")){
-				writeExecutionResults(recData[i][1], "Pass", "C:\\Users\\vj\\workspace\\amazonTests\\Test Data\\test execution controller.xlsx", "Sheet1", result[1]);
+				writeExecutionResults(recData[i][1], "Pass", "Test Data\\test execution controller.xlsx", "Sheet1", result[1]);
 
 			}else if(result[0].equals("Fail")){
-				writeExecutionResults(recData[i][1], "Fail", "C:\\Users\\vj\\workspace\\amazonTests\\Test Data\\test execution controller.xlsx", "Sheet1", result[1]);
+				writeExecutionResults(recData[i][1], "Fail", "Test Data\\test execution controller.xlsx", "Sheet1", result[1]);
 			}
 		}
 

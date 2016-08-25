@@ -27,6 +27,8 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
@@ -38,7 +40,15 @@ public class UtilityClass {
 
 
 
-	//	static WebDriver driver;
+	protected static WebDriver driver;
+	static{
+	
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\vj\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		driver = new ChromeDriver();
+	}
+
+
 	static BufferedWriter bw = null;
 	static BufferedWriter bw1 = null;
 	static String htmlname;
@@ -69,7 +79,7 @@ public class UtilityClass {
 
 
 	public static String startReport(String scriptName, String ReportsPath) throws IOException{
-
+		
 		String strResultPath = null;
 
 
