@@ -1,4 +1,4 @@
-package amazonTests;
+package com.amazonTests;
 
 import java.io.BufferedWriter;
 import java.util.Date;
@@ -24,7 +24,6 @@ import org.apache.poi.xssf.usermodel.XSSFHyperlink;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -67,11 +66,6 @@ public class UtilityClass {
 	static String dataTablePath;
 	static int i;
 	static String browserName;
-
-	@Test
-	public void test() throws Exception {
-
-	}
 
 
 	public static String startReport(String scriptName, String ReportsPath) throws IOException{
