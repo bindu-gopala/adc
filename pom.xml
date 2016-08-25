@@ -30,7 +30,23 @@
       </descriptorRefs>
 
     </configuration>
+     <!-- to run tests and create jar : mvn exec:java -Dexec.mainClass="com.amazonTests.AutomationScriptRunner" -->
   </plugin> 
+  <plugin>
+  <groupId>org.codehaus.mojo</groupId>
+  <artifactId>exec-maven-plugin</artifactId>
+  <version>1.2.1</version>
+  <executions>
+    <execution>
+      <goals>
+        <goal>java</goal>
+      </goals>
+    </execution>
+  </executions>
+  <configuration>
+    <mainClass>com.amazonTests.AutomationScriptRunner</mainClass>
+     </configuration>
+</plugin>
             <!--This plugin's configuration is used to store Eclipse 
                 m2e settings only. It has no influence on the Maven build itself. -->
             <plugin>
