@@ -44,8 +44,8 @@ public class UtilityClass {
 	static{
 	
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\vj\\Downloads\\chromedriver_win32\\chromedriver.exe");
-		driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\MadhuBindu\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		driver = new FirefoxDriver();
 	}
 
 
