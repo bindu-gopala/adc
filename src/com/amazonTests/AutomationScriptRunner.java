@@ -16,6 +16,7 @@ public class AutomationScriptRunner extends AutomationScripts{
 
 	public static void main(String[] args) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, IOException {
 		// TODO Auto-generated method stub
+		//This is a test for commit
 		System.out.println("Maven project started");
 		String[][] recData = AutomationScripts.readExcel("Test Data\\test execution controller.xlsx", "Sheet1");
 		cur_dt = new Date(); 
